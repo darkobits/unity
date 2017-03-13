@@ -94,7 +94,7 @@ export function componentController (name, opts = {}) {
     s[name].$onInit();
   }
 
-  getAll(opts.locals, s);
+  getAll(opts.inject, s);
 
   digest();
 
