@@ -44,7 +44,7 @@ export function controller (name, opts = {}) {
   s.$scope = get('$rootScope').$new();
 
   // Parse controller expression.
-  const [ctrlName, ctrlAs] = opts.name.split(' as ');
+  const [ctrlName, ctrlAs] = name.split(' as ');
 
   s[ctrlName] = get('$controller')(ctrlName, Object.assign({}, opts.locals, {
     $scope: s.$scope

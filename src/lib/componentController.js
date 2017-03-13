@@ -90,7 +90,7 @@ export function componentController (name, opts = {}) {
   }), opts.bindings);
 
   // Run the controller's $onInit lifecycle method, if it defines one.
-  if (opts.init && typeof s[opts.name].$onInit === 'function') {
+  if (opts.init && typeof s[name].$onInit === 'function') {
     s[name].$onInit();
   }
 
