@@ -1,0 +1,7 @@
+
+extends:
+  - plugin:import/errors
+  - plugin:import/warnings
+
+rules:
+  no-console: off
