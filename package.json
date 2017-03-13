@@ -1,7 +1,7 @@
 {
   "name": "@collectivehealth/unity",
   "description": "A library to make unit testing Angular 1 applications suck less.",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "contributors": [
     {
       "name": "Joshua Martin",
