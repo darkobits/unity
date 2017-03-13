@@ -66,10 +66,10 @@ export function componentController (name, opts = {}) {
   // controller to the test $scope under the correct "controllerAs" alias
   // automatically.
 
-  opts = Object.assign({}, opts, {
+  opts = Object.assign({}, {
     init: true,
     locals: {}
-  });
+  }, opts);
 
   const $componentController = get('$componentController');
 
