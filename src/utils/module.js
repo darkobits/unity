@@ -1,10 +1,5 @@
 import angular from 'angular';
 
-import {
-  MockUrlRouterProvider
-} from '../etc/urlRouter.mock.js';
-
-
 let $providerInjector;
 
 
@@ -43,22 +38,24 @@ let $providerInjector;
  *
  * @param {string} module - Module to load.
  * @param {object} [opts] - Options object.
- * @param {boolean} [opts.mockUrlRouter=true] - Whether to mock $urlRouter.
+ * @param {boolean} [opts.disableUiRouter=true] - Whether to disable ui-router.
  * @param {object} [opts.mock] - Object with values that will be used to
  *   create mocked injectables.
  */
 export function module (module, opts = {}) {
-  opts = Object.assign({}, opts, {
-    mockUrlRouter: true
-  });
+  opts = Object.assign({
+    disableUrlRouter: true
+  }, opts);
 
   angular.mock.module(module, ($provide, $injector) => {
     $providerInjector = $injector;
 
-    // Mock $urlRouterProvider by default to prevent most router and resolve
-    // related issues when testing.
-    if (opts.mockUrlRouter) {
-      $provide.provider('$urlRouter', new MockUrlRouterProvider());
+    if (opts.disableUrlRouter) {
+      try {
+        $injector.get('$urlRouterProvider').deferIntercept();
+      } catch (err) {
+        // Application does not use ui-router.
+      }
     }
 
     if (opts.mock) {

@@ -399,7 +399,7 @@ Instantiates an Angular module. By default, ui-router's `$urlRouter` is mocked t
 |---|---|---|
 |`name`|`String`|Module to load.|
 |`[opts]`|`Object`|Options object.|
-|`[opts.mockUrlRouter=true]`|`Boolean`|Whether to mock `$urlRouter`.|
+|`[opts.disableUrlRouter=true]`|`Boolean`|Whether to disable ui-router's `$urlRouter`.|
 |`[opts.mock]`|`Object`|Object with values that will be used to create mocked injectables for the entire application.|
 
 **Example:**
