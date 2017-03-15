@@ -445,6 +445,7 @@ Flush common asynchronous Angular services, then run a digest cycle.
 |`'h'`, `'http'`|`$httpBackend`|
 |`'t'`, `'timeout'`|`$timeout`|
 |`'i'`, `'interval'`|`$interval`|
+|`'a'`, `'animate'`|`$animate`|
 
 **Example:**
 

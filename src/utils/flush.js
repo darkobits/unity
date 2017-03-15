@@ -9,6 +9,7 @@ import {digest} from './digest';
  * |`'h'`, `'http'`|`$httpBackend`|
  * |`'t'`, `'timeout'`|`$timeout`|
  * |`'i'`, `'interval'`|`$interval`|
+ * |`'a'`, `'animate'`|`$animate`|
  *
  * @example
  *
@@ -38,6 +39,10 @@ export function flush (...services) {
       case 'i':
       case 'interval':
         get('$interval').flush();
+        break;
+      case 'a':
+      case 'animate':
+        get('animate').flush();
         break;
       default:
         throw new Error(`[Unity.flush] Unknown token: "${service}"`);
