@@ -42,7 +42,7 @@ export function flush (...services) {
         break;
       case 'a':
       case 'animate':
-        get('animate').flush();
+        get('$animate').flush();
         break;
       default:
         throw new Error(`[Unity.flush] Unknown token: "${service}"`);
