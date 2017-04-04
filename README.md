@@ -391,14 +391,13 @@ describe('MyAwesomeSpec', () => {
 
 ### `module(name: string[, opts: object]): void`
 
-Instantiates an Angular module. By default, ui-router's `$urlRouter` is mocked to prevent the router from interfering with tests. This can be disabled if needed.
+Instantiates one or more modules. By default, ui-router's `$urlRouter` is disabled to prevent the router from iterfering with tests. This can be overridden if needed. Additional mocked injectables can be specified.
 
 **Parameters:**
 
 |Name|Type|Description|
 |---|---|---|
-|`name`|`String`|Module to load.|
-|`[opts]`|`Object`|Options object.|
+|`name`|`Arglist`|List of module names to load. Last argument may be an options object (`opts`).|
 |`[opts.disableUrlRouter=true]`|`Boolean`|Whether to disable ui-router's `$urlRouter`.|
 |`[opts.mock]`|`Object`|Object with values that will be used to create mocked injectables for the entire application.|
 
