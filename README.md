@@ -389,19 +389,50 @@ describe('MyAwesomeSpec', () => {
 });
 ```
 
-### `module(name: string[, opts: object]): void`
+### `module(modules: arglist[, opts: object]): void`
 
-Instantiates one or more modules. By default, ui-router's `$urlRouter` is disabled to prevent the router from iterfering with tests. This can be overridden if needed. Additional mocked injectables can be specified.
+Instantiates one or more modules. By default, ui-router's `$urlRouter` is disabled to prevent the router from iterfering with tests. This can be overridden if needed. Additional mocked injectables can be specified. **Note:** After `module` has been called, the Angular injector will be initialized and additional modules cannot be loaded.
 
 **Parameters:**
 
 |Name|Type|Description|
 |---|---|---|
-|`name`|`Arglist`|List of module names to load. Last argument may be an options object (`opts`).|
+|`modules`|`Arglist`|List of module names (supplied as individual arguments) to load.|
+|`[opts]`|`Object`|Optionally provide additional configuration and mocks.|
 |`[opts.disableUrlRouter=true]`|`Boolean`|Whether to disable ui-router's `$urlRouter`.|
 |`[opts.mock]`|`Object`|Object with values that will be used to create mocked injectables for the entire application.|
 
-**Example:**
+**Examples:**
+
+Loading a single module:
+
+```js
+import {
+  module
+} from '@collectivehealth/unity';
+
+describe('MyAwesomeSpec', () => {
+  beforeEach(() => {
+    module('MyAwesomeApp');
+  });
+});
+```
+
+Loading multiple modules:
+
+```js
+import {
+  module
+} from '@collectivehealth/unity';
+
+describe('MyAwesomeSpec', () => {
+  beforeEach(() => {
+    module('MyAwesomeApp', 'MyOtherApp');
+  });
+});
+```
+
+Globally mocking injectables:
 
 ```js
 import {
