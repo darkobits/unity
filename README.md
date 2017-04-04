@@ -13,6 +13,23 @@
 npm install --save-dev @collectivehealth/unity
 ```
 
+## Documentation
+
+### [API](#api-1)
+- [`controller`](#controllername-string-opts-object-object)
+- [`directive`](#directivename-string-opts-object-object)
+- [`componentController`](#componentcontrollername-string-opts-object-object)
+- [`service`](#servicename-string-opts-object-object)
+- [`provider`](#providername-string-opts-object-object)
+- [`filter`](#filtername-string-opts-object-object)
+
+### [Utilities](#utilities-1)
+- [`get`](#getname-string-object)
+- [`matchUrl`](#matchurlsegments-array-params-object-object)
+- [`module`](#modulemodules-arglist-opts-object-void)
+- [`digest`](#digest-void)
+- [`flush`](#flushservices-string-void)
+
 ## API
 
 These functions are designed to help prepare various Angular constructs for unit testing.
