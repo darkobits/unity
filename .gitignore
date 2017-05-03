@@ -34,9 +34,4 @@ node_modules
 
 .DS_Store
 
-# Ignore files that are managed by @collectivehealth/code-quality.
-/.sass-lint.yml
-/.eslintrc.yml
-
 dist
-docs
