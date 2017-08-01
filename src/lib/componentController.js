@@ -1,6 +1,8 @@
 import angular from 'angular';
 
-import {getAll} from '../utils/getAll';
+import {
+  getAll
+} from '../utils/getAll';
 
 import {
   get,
@@ -62,16 +64,13 @@ import {
 export function componentController (name, opts = {}) {
   const s = {};
 
-  // TODO: Get a reference to the component definition object and attach the
-  // controller to the test $scope under the correct "controllerAs" alias
-  // automatically.
-
   opts = Object.assign({}, {
     init: true,
     locals: {}
   }, opts);
 
-  const $componentController = get('$componentController');
+  // Ensure the injector has the component. This will throw if it doesn't.
+  const componentDefinition = [].concat(get(`${name}Directive`))[0];
 
   // Create a new scope that inherits from $rootScope for testing the component.
   s.$scope = get('$rootScope').$new(true);
@@ -84,10 +83,19 @@ export function componentController (name, opts = {}) {
   s.$element = angular.element('<div></div>');
 
   // Attach component's controller.
-  s[name] = $componentController(name, Object.assign(opts.locals, {
+  s[name] = get('$componentController')(name, Object.assign({
+    $attrs: {}
+  }, opts.locals, {
     $scope: s.$scope,
     $element: s.$element
   }), opts.bindings);
+
+  // If the component specifies a "controllerAs" alias, attach a reference to
+  // the component's controller instance to its $scope under the controller as
+  // alias.
+  if (componentDefinition.controllerAs) {
+    s.$scope[componentDefinition.controllerAs] = s[name];
+  }
 
   // Run the controller's $onInit lifecycle method, if it defines one.
   if (opts.init && typeof s[name].$onInit === 'function') {
