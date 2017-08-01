@@ -1,14 +1,16 @@
+[![][travis-img]][travis-url] [![][david-img]][david-url] [![][david-dev-img]][david-dev-url] [![][npm-img]][npm-url] [![][xo-img]][xo-url]
+
 # unity
 
 Unity is a library that helps you write shorter, cleaner unit tests for your Angular 1.x applications by eliminating much of the boilerplate requried to set up a test suite and by providing utility functions for common tasks.
 
 ## Requirements
 
-- Angular >=1.3.
-- If you run your tests in a browser-like environment (ex: PhantomJS):
+- Angular `>=1.3.0`.
+- If you run your tests in a browser-like environment (ex: Karma + PhantomJS):
   - You may need an ES6 polyfill, like [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/).
   - You will need to run a module-bundler on your test files.
-- If you run your tests in Jest, Unity should Just Work!
+- If you run your tests in [Jest](https://facebook.github.io/jest/), Unity should Just Work!
 
 ## Install
 
@@ -20,23 +22,6 @@ or
 ```bash
 npm install --save-dev @collectivehealth/unity
 ```
-
-## Documentation
-
-### API
-- [`controller`](/src/lib/controller)
-- [`directive`](/src/lib/directive)
-- [`componentController`](/src/lib/componentController)
-- [`service`](/src/lib/service)
-- [`provider`](/src/lib/provider)
-- [`filter`](/src/lib/filter)
-
-### Utilities
-- [`get`](/src/utils/compile)
-- [`matchUrl`](/src/utils/matchUrl)
-- [`module`](/src/utils/module)
-- [`digest`](/src/utils/digest)
-- [`flush`](/src/utils/flush)
 
 ## Example
 
@@ -102,3 +87,22 @@ describe('MyCtrl', () => {
 - One shared variable across specs, regardless of how many injectables are being used.
 - Syntax is terse and readable.
 - Zero boilerplate to access an injectable, just use `get()` wherever you need it! 😺
+
+---
+
+For more information, check out the [documentation](/src). Happy testing! 🎉
+
+[travis-img]: https://img.shields.io/travis/collectivehealth/unity.svg?style=flat-square
+[travis-url]: https://travis-ci.org/collectivehealth/unity
+
+[david-img]: https://img.shields.io/david/collectivehealth/unity.svg?style=flat-square
+[david-url]: https://david-dm.org/collectivehealth/unity
+
+[david-dev-img]: https://img.shields.io/david/dev/collectivehealth/unity.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/collectivehealth/unity?type=dev
+
+[xo-img]: https://img.shields.io/badge/code_style-XO-e271a5.svg?style=flat-square
+[xo-url]: https://github.com/sindresorhus/xo
+
+[npm-img]: https://img.shields.io/npm/v/@collectivehealth/unity.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@collectivehealth/unity
