@@ -73,9 +73,10 @@ import {
  * @param  {string}  name - Directive name.
  * @param  {object}  opts - Options object.
  * @param  {string}  opts.template - Template to use to test the directive.
- * @param  {string}  [opts.wrap] - Template string to .wrap() around the
- *   directive's primary template. Useful for directives that `require` a
- *   parent directive in order to function, or otherwise depend on context.
+ * @param  {string|object}  [opts.wrap] - Template string or pre-compiled
+ *   element to .wrap() around the directive's template. Useful for directives
+ *   that `require` a parent directive in order to function, or are otherwise
+ *   sensitive to context.
  * @param  {object}   [opts.scope] - Properties of the directive's parent scope.
  * @param {array} [opts.inject] - Additional injectables to attach to the spec
  *   object for convenience.
@@ -85,7 +86,7 @@ export function directive (name, opts = {}) {
   const s = {};
   let compiledDirective;
 
-  // Ensure the injector has the directive. This will throw if it isn't.
+  // Ensure the injector has the directive. This will throw if it doesn't.
   get(name + 'Directive');
 
   // Ensure the user provided a template.
@@ -101,14 +102,28 @@ export function directive (name, opts = {}) {
   }
 
   if (opts.wrap) {
-    // Compile the wrapper element.
-    const compiledWrapper = get('$compile')(opts.wrap)(s.$scope);
+    let compiledWrapper;
+
+    if (typeof opts.wrap === 'string') {
+      // Compile the wrapper element.
+      compiledWrapper = get('$compile')(opts.wrap)(s.$scope);
+    } else if (typeof opts.wrap === 'object') {
+      // Assume opts.wrap is a pre-compiled element.
+      compiledWrapper = opts.wrap;
+    }
 
     // Construct directive's template.
     const directiveEl = angular.element(opts.template);
 
-    // Append template to compiled wrapper.
-    compiledWrapper.append(directiveEl);
+    if (compiledWrapper.find('transclude').length === 1) {
+      // Insert the directive element at the indicated transclusion point.
+      compiledWrapper.find('transclude').replaceWith(directiveEl);
+    } else if (compiledWrapper.find('transclude').length > 1) {
+      throw new Error('[Unity] Only 1 transclusion slot allowed.');
+    } else {
+      // Append template to compiled wrapper.
+      compiledWrapper.append(directiveEl);
+    }
 
     // Compile directive.
     compiledDirective = get('$compile')(directiveEl)(s.$scope);

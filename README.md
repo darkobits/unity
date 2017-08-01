@@ -159,8 +159,8 @@ Directives require a template, analogous to a function's call site, that will de
 |`name`|`String`|Name of the directive.|
 |`opts`|`Object`|Options object.|
 |`opts.template`|`String`|Template to use to test the directive.|
-|`[opts.wrap]`|`String`|Template string to [wrap()](http://api.jquery.com/wrap/) around the directive's primary template. Useful for directives that `require` a parent directive in order to function, or otherwise depend on context.|
-|`[opts.scope]`|`Object`|Properties of the directive's parent scope.|
+|`[opts.wrap]`|`String` || `Object`|Template string or pre-compiled element to wrap around the directive's template. Useful for directives that `require` a parent directive in order to function, or are otherwise sensitive to context. If you need to insert the directive at a specific place in the wrapper template, you may create a `<transclude></transclude>` element and Unity will call [replaceWith()](https://api.jquery.com/replaceWith/) on it. Otherwise, the directive will be [append()](https://api.jquery.com/append/)-ed to the wrapper's outermost element.|
+|`[opts.scope]`|`Object`|Properties to add to the directive's parent scope.|
 |`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/collectivehealth/unity#getname-string-object) instead.*|
 
 **Returns:**
