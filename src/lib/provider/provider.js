@@ -16,7 +16,7 @@ import {
  *   object, for convenience.
  * @return  {object} - Spec object.
  */
-export function provider (name, opts = {}) {
+export default function provider(name, opts = {}) {
   const s = {};
   const providerInjector = getProviderInjector();
 

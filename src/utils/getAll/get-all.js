@@ -14,7 +14,7 @@ import {
  * @param  {array} injectables - List of injectables to load.
  * @param  {object} spec - Object to attach injectables to.
  */
-export function getAll (injectables = [], spec = {}) {
+export default function getAll(injectables = [], spec = {}) {
   angular.forEach(injectables, name => {
     spec[name] = get(name);
   });

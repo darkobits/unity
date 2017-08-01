@@ -45,7 +45,7 @@ import {
  * @return {RegExp} - Regular expression instance that can be passed to
  *   `$httpBackend.when()` for URL-matching.
  */
-export function matchUrl (segments, params) {
+export default function matchUrl(segments, params) {
   return new RegExp([
     '^',
     segments.join('.*'),

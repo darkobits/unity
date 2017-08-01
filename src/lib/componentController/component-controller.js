@@ -1,8 +1,5 @@
 import angular from 'angular';
-
-import {
-  getAll
-} from '../../utils/getAll/getAll';
+import getAll from '../../utils/getAll/get-all';
 
 import {
   get,
@@ -61,7 +58,7 @@ import {
  *   component's $onInit method. Defaults to `true`.
  * @return {object} - Spec object.
  */
-export function componentController (name, opts = {}) {
+export default function componentController(name, opts = {}) {
   const s = {};
 
   opts = Object.assign({}, {

@@ -1,23 +1,23 @@
 export {
-  controller
+  default as controller
 } from './controller/controller';
 
 export {
-  directive
+  default as directive
 } from './directive/directive';
 
 export {
-  componentController
-} from './componentController/componentController';
+  default as componentController
+} from './componentController/component-controller';
 
 export {
-  service
+  default as service
 } from './service/service';
 
 export {
-  provider
+  default as provider
 } from './provider/provider';
 
 export {
-  filter
+  default as filter
 } from './filter/filter';

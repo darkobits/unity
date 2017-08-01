@@ -1,10 +1,8 @@
+import getAll from '../../utils/getAll/get-all';
+
 import {
   get
 } from '../../utils';
-
-import {
-  getAll
-} from '../../utils/getAll/getAll';
 
 
 /**
@@ -43,7 +41,7 @@ import {
  *   object for convenience.
  * @return  {object} - Spec object.
  */
-export function controller (name, opts = {}) {
+export default function controller(name, opts = {}) {
   const s = {};
 
   s.$scope = get('$rootScope').$new();

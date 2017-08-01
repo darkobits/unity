@@ -14,7 +14,7 @@ import {
  *
  * digest();
  */
-export function digest () {
+export default function digest() {
   get('$rootScope').$digest();
 
   // This will ensure any pending $applyAsync calls are run.

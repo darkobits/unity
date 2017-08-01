@@ -1,8 +1,5 @@
 import angular from 'angular';
-
-import {
-  getAll
-} from '../../utils/getAll/getAll';
+import getAll from '../../utils/getAll/get-all';
 
 import {
   get,
@@ -84,7 +81,7 @@ import {
  *   object for convenience.
  * @return  {object} - Spec object.
  */
-export function directive (name, opts = {}) {
+export default function directive(name, opts = {}) {
   const s = {};
   let compiledDirective;
 

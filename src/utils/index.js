@@ -1,23 +1,23 @@
 export {
-  compile
+  default as compile
 } from './compile/compile';
 
 export {
-  get
+  default as get
 } from './get/get';
 
 export {
-  matchUrl
-} from './matchUrl/matchUrl';
+  default as matchUrl
+} from './matchUrl/match-url';
 
 export {
-  module
+  default as module
 } from './module/module';
 
 export {
-  digest
+  default as digest
 } from './digest/digest';
 
 export {
-  flush
+  default as flush
 } from './flush/flush';

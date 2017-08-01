@@ -1,6 +1,4 @@
-import {
-  getAll
-} from '../../utils/getAll/getAll';
+import getAll from '../../utils/getAll/get-all';
 
 import {
   get,
@@ -40,7 +38,7 @@ import {
  *   object, for convenience.
  * @return  {object} - Spec object.
  */
-export function filter (name, opts = {}) {
+export default function filter(name, opts = {}) {
   const s = {};
 
   s[name] = get('$filter')(name);

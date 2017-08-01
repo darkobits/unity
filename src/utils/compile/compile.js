@@ -25,7 +25,7 @@ import {
  *   parent directive upon compilation.
  * @return {object} - Compiled DOM element.
  */
-export function compile ({template, scope = {}, insertAt} = {}) {
+export default function compile({template, scope = {}, insertAt} = {}) {
   if (!template || typeof template !== 'string') {
     throw new Error('[Unity] Compile requires a "template" option.');
   }

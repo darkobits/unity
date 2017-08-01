@@ -1,6 +1,4 @@
-import {
-  getAll
-} from '../../utils/getAll/getAll';
+import getAll from '../../utils/getAll/get-all';
 
 import {
   get,
@@ -44,7 +42,7 @@ import {
  *   object, for convenience.
  * @return {object} - Spec object.
  */
-export function service (name, opts = {}) {
+export default function service(name, opts = {}) {
   const s = {};
 
   // Attach the service to the spec if it exists. If not, this will throw.

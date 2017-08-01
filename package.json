@@ -27,7 +27,7 @@
     "docs:serve": "npm run docs:build && open http://localhost:9000 & http-server ./docs --silent -p 9000",
     "build": "run-p clean lint && babel src --out-dir dist",
     "build:watch": "watch \"npm run build\" ./src/",
-    "lint": "eslint .",
+    "lint": "xo",
     "prepush": "npm run lint",
     "prepublish": "run-s lint build"
   },
@@ -45,6 +45,17 @@
     "husky": "0.14.x",
     "npm-run-all": "4.x",
     "rimraf": "2.x",
-    "watch": "1.x"
+    "watch": "1.x",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "env": [
+      "node"
+    ],
+    "space": true,
+    "rules": {
+      "import/no-unassigned-import": "off",
+      "no-multiple-empty-lines": "off"
+    }
   }
 }

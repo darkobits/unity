@@ -42,7 +42,7 @@ let $providerInjector;
  * @param {object} [opts.mock] - Object with values that will be used to
  *   create mocked injectables.
  */
-export function module (...args) {
+export default function module(...args) {
   let modules;
 
   const opts = {
@@ -107,6 +107,6 @@ export function module (...args) {
  *
  * @return {object}
  */
-export function getProviderInjector () {
+export function getProviderInjector() {
   return $providerInjector;
 }

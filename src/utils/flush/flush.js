@@ -27,7 +27,7 @@ import {
  *
  * @param  {arglist} args - Services to flush.
  */
-export function flush (...services) {
+export default function flush(...services) {
   services.forEach(service => {
     switch (service) {
       case 'h':

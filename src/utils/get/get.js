@@ -15,7 +15,7 @@ import angular from 'angular';
  * @param  {string} name - Name of an injectable.
  * @return {object} - Injectable instance.
  */
-export function get (name) {
+export default function get(name) {
   let injectable;
 
   try {
