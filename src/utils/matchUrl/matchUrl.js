@@ -1,4 +1,6 @@
-import {get} from './get';
+import {
+  get
+} from '../';
 
 /**
  * `$httpBackend` accepts either a string or a regular expression. When passing

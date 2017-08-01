@@ -2,7 +2,7 @@ import angular from 'angular';
 
 import {
   get
-} from './get';
+} from '../';
 
 
 /**

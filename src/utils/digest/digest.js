@@ -1,6 +1,6 @@
 import {
   get
-} from './get';
+} from '../';
 
 
 /**

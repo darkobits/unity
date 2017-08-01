@@ -1,9 +1,11 @@
-import {getAll} from '../utils/getAll';
+import {
+  getAll
+} from '../../utils/getAll/getAll';
 
 import {
   get,
   digest
-} from '../utils';
+} from '../../utils';
 
 
 /**

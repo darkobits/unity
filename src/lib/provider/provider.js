@@ -1,10 +1,10 @@
 import {
   digest
-} from '../utils';
+} from '../../utils';
 
 import {
   getProviderInjector
-} from '../utils/module';
+} from '../../utils/module/module';
 
 
 /**

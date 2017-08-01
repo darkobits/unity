@@ -1,5 +1,10 @@
-import {get} from '../utils';
-import {getAll} from '../utils/getAll';
+import {
+  get
+} from '../../utils';
+
+import {
+  getAll
+} from '../../utils/getAll/getAll';
 
 
 /**

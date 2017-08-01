@@ -1,6 +1,23 @@
-export {controller} from './controller';
-export {directive} from './directive';
-export {componentController} from './componentController';
-export {service} from './service';
-export {provider} from './provider';
-export {filter} from './filter';
+export {
+  controller
+} from './controller/controller';
+
+export {
+  directive
+} from './directive/directive';
+
+export {
+  componentController
+} from './componentController/componentController';
+
+export {
+  service
+} from './service/service';
+
+export {
+  provider
+} from './provider/provider';
+
+export {
+  filter
+} from './filter/filter';

@@ -1,5 +1,8 @@
 import angular from 'angular';
-import {get} from './get';
+
+import {
+  get
+} from '../';
 
 /**
  * @private

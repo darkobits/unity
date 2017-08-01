@@ -1,6 +1,23 @@
-export {compile} from './compile';
-export {get} from './get';
-export {matchUrl} from './matchUrl';
-export {module} from './module';
-export {digest} from './digest';
-export {flush} from './flush';
+export {
+  compile
+} from './compile/compile';
+
+export {
+  get
+} from './get/get';
+
+export {
+  matchUrl
+} from './matchUrl/matchUrl';
+
+export {
+  module
+} from './module/module';
+
+export {
+  digest
+} from './digest/digest';
+
+export {
+  flush
+} from './flush/flush';

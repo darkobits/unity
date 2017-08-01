@@ -2,12 +2,12 @@ import angular from 'angular';
 
 import {
   getAll
-} from '../utils/getAll';
+} from '../../utils/getAll/getAll';
 
 import {
   get,
   digest
-} from '../utils';
+} from '../../utils';
 
 
 /**

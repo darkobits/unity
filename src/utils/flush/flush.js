@@ -1,5 +1,7 @@
-import {get} from './get';
-import {digest} from './digest';
+import {
+  get,
+  digest
+} from '../';
 
 /**
  * Flushes common asynchronous Angular services, then run a digest cycle.
