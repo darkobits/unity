@@ -61,8 +61,8 @@ export function module (...args) {
   }
 
 
-  if (!modules.length) {
-    throw new Error('[unity] module() expects at least 1 module name.');
+  if (modules.length === 0) {
+    throw new Error('[unity] module() expects at least 1 module name. Got:' + JSON.stringify(args));
   }
 
 
@@ -73,7 +73,7 @@ export function module (...args) {
 
 
   angular.mock.module(($provide, $injector) => {
-    // Safe a reference to the provider injector.
+    // Save a reference to the provider injector.
     $providerInjector = $injector;
 
     // Disable ui-router.
