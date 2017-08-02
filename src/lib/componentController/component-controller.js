@@ -10,40 +10,6 @@ import {
 /**
  * Prepare a component's controller for testing.
  *
- * See:
- * - [Unit-testing Component Controllers]{@link https://docs.angularjs.org/guide/component#unit-testing-component-controllers}
- * - [$componentController]{@link https://docs.angularjs.org/api/ngMock/service/$componentController}
- *
- * @example
- *
- * import {
- *   module,
- *   componentController,
- * } from '@collectivehealth/unity';
- *
- * describe('MyAwesomeComponent', () => {
- *   let T;
- *
- *   beforeEach(() => {
- *     module('MyApp');
- *
- *     T = componentController('myAwesomeComponent', {
- *       bindings: {
- *         foo: 'bar',
- *         baz: 'qux'
- *       }
- *     });
- *   });
- *
- *   it('should be awesome', () => {
- *     //=> T:
- *     // {
- *     //   $scope: {},Component's parent scope.
- *     //   myAwesomeComponent: // Component's controller.
- *     // }
- *   });
- * });
- *
  * @param  {string} name - Component name.
  * @param  {object} opts - Options object.
  * @param  {object} [opts.locals] - Injection locals for the controller, will

@@ -8,34 +8,6 @@ let $providerInjector;
  * disabled to prevent the router from interfering with tests. This can be
  * overridden if needed. Additional mocked injectables can be specified.
  *
- * @example
- *
- * import {
- *   module,
- *   get
- * } from '@collectivehealth/unity';
- *
- * describe('MyAwesomeSpec', () => {
- *   let T;
- *
- *   beforeEach(() => {
- *     module('MyAwesomeApp', 'MyOtherApp', {
- *       mock: {
- *         SomeAwesomeService: {
- *           callApi: function () {
- *             return get('$q').resolve()
- *           },
- *           logOut: function () {
- *             return true;
- *           }
- *         }
- *       }
- *     });
- *   });
- *
- *   // ...
- * });
- *
  * @param {arglist} module - List of module names to load. Last argument may be
  *   an options object (`opts`).
  * @param {boolean} [opts.disableUiRouter=true] - Whether to disable ui-router.

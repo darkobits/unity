@@ -6,20 +6,26 @@ Run a digest cycle on the root scope. Shorthand for `get('$rootScope').$digest()
 
 ```js
 import {
-  digest
-} from '@collectivehealth/unity';
+  digest,
+  directive
+} from '@darkobits/unity';
 
 describe('SomeAsyncUnit', () => {
   let T;
 
   beforeEach(() => {
-    // Instantiate something that needs to have a digest cycle run before it can
-    // be tested.
+    T = directive('SomeDirectiveThatNeedsADigestCycleRunBeforeTesting', {
+      // ...
+    });
 
     digest();
+  });
+
+  it('should be ready to test', () => {
+    // Yay!
   });
 });
 ```
 
 **See Also:**
-- [flush]()
+- [flush](/src/utils/flush)

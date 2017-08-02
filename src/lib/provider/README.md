@@ -8,7 +8,7 @@ Prepares a provider for testing.
 |---|---|---|
 |`name`|`String`|Name of the provider.|
 |`[opts]`|`Object`|Options object.|
-|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/collectivehealth/unity#getname-string-object) instead.*|
+|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/src/utils/get) instead.*|
 
 **Returns:**
 
@@ -24,7 +24,7 @@ Prepares a provider for testing.
 import {
   module,
   provider
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeProvider', () => {
   let T;

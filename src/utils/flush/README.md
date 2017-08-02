@@ -14,7 +14,7 @@ Flush common asynchronous Angular services, then run a digest cycle.
 ```js
 import {
   flush
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 // Flush $httpBackend, then run a digest cycle.
 flush('http');

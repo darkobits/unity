@@ -15,12 +15,12 @@ Unity is a library that helps you write shorter, cleaner unit tests for your Ang
 ## Install
 
 ```bash
-yarn add --dev @collectivehealth/unity
+yarn add --dev @darkobits/unity
 ```
 or
 
 ```bash
-npm install --save-dev @collectivehealth/unity
+npm install --save-dev @darkobits/unity
 ```
 
 ## Example
@@ -66,7 +66,7 @@ import {
   controller,
   get,
   module
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyCtrl', () => {
   let T;
@@ -92,17 +92,17 @@ describe('MyCtrl', () => {
 
 For more information, check out the [documentation](/src). Happy testing! 🎉
 
-[travis-img]: https://img.shields.io/travis/collectivehealth/unity.svg?style=flat-square
-[travis-url]: https://travis-ci.org/collectivehealth/unity
+[travis-img]: https://img.shields.io/travis/darkobits/unity.svg?style=flat-square
+[travis-url]: https://travis-ci.org/darkobits/unity
 
-[david-img]: https://img.shields.io/david/collectivehealth/unity.svg?style=flat-square
-[david-url]: https://david-dm.org/collectivehealth/unity
+[david-img]: https://img.shields.io/david/darkobits/unity.svg?style=flat-square
+[david-url]: https://david-dm.org/darkobits/unity
 
-[david-dev-img]: https://img.shields.io/david/dev/collectivehealth/unity.svg?style=flat-square
-[david-dev-url]: https://david-dm.org/collectivehealth/unity?type=dev
+[david-dev-img]: https://img.shields.io/david/dev/darkobits/unity.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/darkobits/unity?type=dev
 
 [xo-img]: https://img.shields.io/badge/code_style-XO-e271a5.svg?style=flat-square
 [xo-url]: https://github.com/sindresorhus/xo
 
-[npm-img]: https://img.shields.io/npm/v/@collectivehealth/unity.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/@collectivehealth/unity
+[npm-img]: https://img.shields.io/npm/v/@darkobits/unity.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@darkobits/unity

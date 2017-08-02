@@ -4,14 +4,6 @@ import angular from 'angular';
  * Returns the named injectable. Throws an error if the injectable doesn't
  * exist.
  *
- * @example
- *
- * import {
- *   get
- * } from '@collectivehealth/unity';
- *
- * let q = get('$q');
- *
  * @param  {string} name - Name of an injectable.
  * @return {object} - Injectable instance.
  */

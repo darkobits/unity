@@ -9,14 +9,6 @@ import {
  * Compiles the provided template string using the provided scope. If no scope
  * was provided, a new one will be created.
  *
- * @example
- *
- * let scope = get('$rootScope').$new();
- * scope.foo = 'bar';
- *
- * let el = compile('<div>{{ foo }}</div>')(scope);
- * el.find('div').innerHTML; // 'foo'
- *
  * @param  {string} options.template - Template string.
  * @param  {object} [options.scope] - Optional scope to use.
  * @param  {object} [options.insertAt] - jqLite element in an existing DOM

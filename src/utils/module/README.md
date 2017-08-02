@@ -22,7 +22,7 @@ Loading a single module:
 ```js
 import {
   module
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeSpec', () => {
   beforeEach(() => {
@@ -36,7 +36,7 @@ Loading multiple modules:
 ```js
 import {
   module
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeSpec', () => {
   beforeEach(() => {
@@ -51,7 +51,7 @@ Globally mocking injectables:
 import {
   module,
   get
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeSpec', () => {
   let T;

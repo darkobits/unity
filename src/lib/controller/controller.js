@@ -8,30 +8,6 @@ import {
 /**
  * Prepares a controller for testing.
  *
- * @example
- *
- * import {
- *   module,
- *   controller,
- * } from '@collectivehealth/unity';
- *
- * describe('MyAwesomeCtrl', () => {
- *   let T;
- *
- *   beforeEach(() => {
- *     module('MyApp');
- *     T = controller('MyAwesomeCtrl');
- *   });
- *
- *   it('should be awesome', () => {
- *     //=> T:
- *     // {
- *     //   $scope: {},Controller's scope.
- *     //   MyAwesomeCtrl: // Controller.
- *     // }
- *   });
- * });
- *
  * @param  {string} name - Name of the controller being tested. Supports
  *   'controller as' syntax for testing controllers that use `$scope`.
  * @param  {object} [opts] - Options object.

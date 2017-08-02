@@ -9,7 +9,7 @@ Prepares a controller for testing.
 |`name`|`String`|Name of the controller. Supports `controllerAs` syntax.|
 |`[opts]`|`Object`|Options object.|
 |`[opts.locals]`|`Array`|Injection locals for the controller, will override the default injectable that the controller asks for.|
-|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/collectivehealth/unity#getname-string-object) instead.*|
+|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/src/utils/get) instead.*|
 
 **Returns:**
 
@@ -26,7 +26,7 @@ Prepares a controller for testing.
 import {
   module,
   controller,
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeCtrl', () => {
   let T;

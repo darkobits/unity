@@ -24,7 +24,7 @@ import {
   compile,
   directive,
   module
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('Foo Directive', () => {
   let T;

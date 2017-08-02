@@ -5,14 +5,6 @@ import {
 
 /**
  * Run a digest cycle on the root scope and flush any pending $applyAsync calls.
- *
- * @example
- *
- * import {
- *   digest
- * } from '@collectivehealth/unity';
- *
- * digest();
  */
 export default function digest() {
   get('$rootScope').$digest();

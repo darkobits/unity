@@ -17,7 +17,7 @@ See:
 |`[opts.bindings]`|`Object`|Optional bindings to pass to the controller instance.|
 |`[opts.scope]`|`Object`|Properties of the components's parent scope.|
 |`[opts.init=true]`|`Boolean`|Whether to automatically call the component's `$onInit` method. Defaults to `true`.|
-|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/collectivehealth/unity#getname-string-object) instead.*|
+|`[opts.inject]`|`Object`|Additional injectables to attach to the spec object for convenience. *Discouraged, use [`get()`](/src/utils/get) instead.*|
 
 **Returns:**
 
@@ -35,7 +35,7 @@ See:
 import {
   module,
   componentController,
-} from '@collectivehealth/unity';
+} from '@darkobits/unity';
 
 describe('MyAwesomeComponent', () => {
   let T;

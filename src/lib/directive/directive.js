@@ -33,42 +33,6 @@ import {
  * - `$isolateScope` - Reference to the directive's isolate scope, if it uses
  *   one.
  *
- * @example
- *
- * import {
- *   module,
- *   directive,
- * } from '@collectivehealth/unity';
- *
- * describe('MyAwesomeDirective', () => {
- *   let T;
- *
- *   beforeEach(() => {
- *     module('MyApp');
- *
- *     T = directive('MyAwesomeDirective', {
- *       template: `
- *         <my-awesome-directive
- *           ng-model="foo">
- *         </my-awesome-directive>
- *       `,
- *       scope: {
- *         foo: 'bar'
- *       }
- *     });
- *   });
- *
- *   it('should be awesome', () => {
- *     //=> T:
- *     // {
- *     //   $scope: {} // Directive's parent scope.
- *     //   $isolateScope: {} // Directive's isolate scope.
- *     //   $element: {} // Directive's element.
- *     //   myAwesomeDirective: // Directives's controller.
- *     // }
- *   });
- * });
- *
  * @param  {string}  name - Directive name.
  * @param  {object}  opts - Options object.
  * @param  {string}  opts.template - Template to use to test the directive.
