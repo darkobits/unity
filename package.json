@@ -23,11 +23,10 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "docs:build": "rimraf docs && jsdoc --configure .jsdoc.json --verbose",
-    "docs:serve": "npm run docs:build && open http://localhost:9000 & http-server ./docs --silent -p 9000",
-    "build": "run-p clean lint && babel src --out-dir dist",
-    "build:watch": "watch \"npm run build\" ./src/",
     "lint": "xo",
+    "prebuild": "run-p clean lint",
+    "build": "babel src --out-dir dist",
+    "build:watch": "watch \"npm run build\" ./src/",
     "prepush": "npm run lint",
     "prepublish": "run-s lint build"
   },
