@@ -1,6 +1,6 @@
-[![][travis-img]][travis-url] [![][david-img]][david-url] [![][david-dev-img]][david-dev-url] [![][npm-img]][npm-url] [![][xo-img]][xo-url]
+![unity](https://user-images.githubusercontent.com/441546/36626638-2f35e252-18eb-11e8-84e6-1ff6e208cdbf.png)
 
-# unity
+[![][travis-img]][travis-url] [![][david-img]][david-url] [![][david-dev-img]][david-dev-url] [![][npm-img]][npm-url] [![][xo-img]][xo-url]
 
 Unity is a library that helps you write shorter, cleaner unit tests for your Angular 1.x applications by eliminating much of the boilerplate requried to set up a test suite and by providing utility functions for common tasks.
 
